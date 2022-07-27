@@ -1,0 +1,210 @@
+body {
+  color: white;
+  font-family: sans-serif;  
+  background: #1d2a35;
+  margin:0;
+}
+.box-main{
+  align-items:center;
+
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.question{
+  align-items:center;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  padding-top: 5px;
+}
+.kana-question{
+  align-items:center;
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 100px;
+}
+#start-button-id{
+  padding-top: 3%;
+  align-items:center;
+  color:white;
+  text-align: center;
+  font-weight: bold;
+}
+#question{
+  display: block;
+  align-items:center;
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+#answer-form{
+  display: none;
+  align-items:center;
+  color:white;
+  text-align: center;
+  font-weight: bold;
+}
+#results{
+    display:none;
+    align-items:center;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+}
+.title{
+    margin:50px;
+}
+
+/* learn styling*/
+#learn-content h3 {
+    display:grid;
+    text-align:center;
+
+}
+#learn-paragraph {
+    text-align:center;
+    margin: 30px;
+    
+}
+
+.dakuten {
+    color:crimson;
+}
+.handakuten {
+    color:darkorange;
+}
+#nasalRow {
+    color:springgreen;
+}
+
+.irregular {
+    color:springgreen;
+}
+
+#legend h3,p {
+    display:flex;
+    justify-content:center;
+    
+}
+#listIrregular {
+    display:grid;
+    justify-content:center;
+}
+
+/* character markings*/
+.kanji{
+    
+    color:crimson;
+    display:inline;
+    font-size:20px;
+
+
+}
+.hiragana {
+    color: darkorange;
+}
+.katakana{
+    color:springgreen;
+}
+
+#notification{
+    color:gray;
+}
+
+/* navigation */
+    /* Seperates the two navigation blocks and fills between them */
+#nav {
+
+    display:flow-root;
+    background-color:black;
+    height:80px;
+    padding-top:0px;
+    margin-top:-14px;
+
+}
+/*keeps left navigation box to the left*/
+.nav-content-left {
+    display:flex;
+    list-style-type:none;
+    justify-content: left;
+    flex-wrap: wrap;
+    
+    font-weight:bold;
+    
+
+}
+.nav-left{
+    float:left;
+}
+/*keeps right navigation box to the right */
+.nav-right {
+    float:right;
+}
+.nav-content-right {
+    display:flex;
+    list-style-type:none;
+    justify-content: right;
+    flex-wrap: wrap;
+   
+    font-weight:bold;
+    
+}
+.nav-item {
+    padding: 1em;
+    
+}
+.nav-item a {
+    text-decoration: none;
+    color:white;
+    
+}
+/* Adds highlight to nav links */
+#nav li {
+    font-size:20px;
+}
+#nav a:hover {
+    
+    color: #d578c8;
+}
+
+
+
+/*button styling */
+
+input[type=button]:hover {
+    border-radius: 10px;
+    
+}
+
+input[type=button] {
+    border-radius: 5px;
+    border-width: 0px;
+    width: 8%;
+    border-color: white;
+    background-color: #d578c8;
+    color: black;
+    font-weight: normal;
+    font-family:sans-serif;
+}
+input[type=text]{
+  color:slategray;
+  font-weight: 100; 
+  
+  
+
+}
+
+
+/*Table styling learn.html*/
+
+#hiragana_table{
+    display: flex;
+    justify-content:center;
+
+}
+#hiragana_table td{
+    padding: 10px;
+}

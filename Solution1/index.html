@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Japanese Kana Test</title>
+    <link href="CSS/main.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    
+</head>
+
+<body>
+
+
+
+<header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav-left">
+       <ul class="nav-content-left">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+       </ul>            
+      
+      </div>
+
+
+      <div class="nav-right">
+      <ul class="nav-content-right">
+        <li class="nav-item"><a href="learn.html">Learn Kana</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+      </div>
+    </nav>
+ </header>
+
+
+    <section class="title">
+        <!--
+        <script>displayQuestion();</script>
+        -->
+        <div class="box-main">
+            <h1>KANA PRACTICE</h1>
+            <h2>ひらがな・カタカナ</h2>
+            <p>Made by: Matt Romero</p>
+        </div>
+    </section>
+    
+
+    <div class="start-button" id="start-button-id">
+        <h3>Ready to start?</h3>
+        <input type="button" value="Click me" onclick="displayQuestion()" />
+
+    </div>
+
+    <!-- Asks question-->
+    <div class="question">
+        <p id="question"></p>
+    </div>
+
+
+
+    <div id="answer-form">
+        <form id="form1">
+            <label for="answer-box">What is this kana?</label><br>
+            <input type="text" autocomplete="off" id="answer" value=""><br><br>
+            <input type="button" value="Submit" onclick="displayResult()" />
+        </form>
+    </div>
+
+
+
+    <!-- Results block-->
+    <div id="results">
+        <form id="continue">
+            <p id="result"></p>
+            <input type="button" value="Continue" onclick="displayQuestion()" />
+        </form>
+    </div>
+
+
+
+    <!--<script type="text/javascript" src="Javascript/scripts.js"></script> -->
+    <script type="text/javascript" src="Javascript/testScript.js"></script>
+</body>
+</html>
