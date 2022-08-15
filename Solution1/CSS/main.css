@@ -4,6 +4,35 @@ body {
   background: #1d2a35;
   margin:0;
 }
+
+.aboutTitle {
+    text-align:center;
+}
+#aboutBlockLeft {
+    
+}
+#aboutLinks {
+    list-style: none;
+    text-decoration: none;
+}
+#links {
+    background:black;
+    color:white;
+}
+#linkedin {
+    list-style-image: url('https://th.bing.com/th/id/R.248909efd0ba579bfa687e0b65362478?rik=fS%2btW%2fUIfp1a5w&riu=http%3a%2f%2ffindicons.com%2ffiles%2ficons%2f1982%2fsocial_me%2f60%2flinkedin.png&ehk=C6rw%2fg3rU1DLs5y9gPp3q7b7dVbtLBrp11xNU4MsCgw%3d&risl=&pid=ImgRaw&r=0');
+}
+#aboutLinks a {
+    text-decoration:none;
+    color: white;
+}
+td {
+    border:solid;
+}
+.emptyCell{
+    color:gray;
+   
+}
 .box-main{
   align-items:center;
 
@@ -31,6 +60,20 @@ body {
   color:white;
   text-align: center;
   font-weight: bold;
+  
+}
+#start-button-id input {
+   
+    background-color: #1d2a35;
+    margin: 5px;
+    color:white;
+    font-size: 18px;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+#quizList {
 }
 #question{
   display: block;
@@ -112,14 +155,31 @@ body {
 
 #notification{
     color:gray;
+    font-style: italic;
 }
 
 /* navigation */
+.pinButton1 {
+    position: absolute;
+    bottom: 0;
+    transform: translatex(0%);
+    background-color: #1d2a35;
+    
+
+}
+
+.projectList {
+    color:green;
+}
+
     /* Seperates the two navigation blocks and fills between them */
+.header{
+    background-color:black;
+}
 #nav {
 
     display:flow-root;
-    background-color:black;
+    
     height:80px;
     padding-top:0px;
     margin-top:-14px;
@@ -161,14 +221,16 @@ body {
     color:white;
     
 }
+
 /* Adds highlight to nav links */
 #nav li {
     font-size:20px;
 }
 #nav a:hover {
     
-    color: #d578c8;
+    color: orange;
 }
+
 
 
 
@@ -184,7 +246,7 @@ input[type=button] {
     border-width: 0px;
     width: 8%;
     border-color: white;
-    background-color: #d578c8;
+    
     color: black;
     font-weight: normal;
     font-family:sans-serif;
@@ -197,6 +259,11 @@ input[type=text]{
 
 }
 
+.quizButtons {
+    background-color:orange;
+}
+
+
 
 /*Table styling learn.html*/
 
@@ -207,4 +274,92 @@ input[type=text]{
 }
 #hiragana_table td{
     padding: 10px;
+}
+#katakana_table {
+    display: none;
+    justify-content: center;
+}
+
+#katakana_table td {
+    padding: 10px;
+ }
+
+
+/*Table Switch*/
+td{
+    cursor: pointer;
+}
+#hiraganaButton {
+    color: orange;
+    border: solid 5px orange;
+    padding: 5px;
+    cursor: pointer;
+}
+#katakanaButton {
+    color: gray;
+    border: solid 5px gray;
+    padding: 5px;
+    cursor: pointer;
+}
+#katakanaButton:hover {
+    color:springgreen;
+    border-color:springgreen
+
+}
+#hiraganaButton:hover {
+    color:orange;
+    border-color:orange;
+}
+#tableSwitch {
+    display:flex;
+    justify-content: center;
+}
+
+#titleHiragana {
+    color:orange;
+}
+#titleKatakana {
+    color:springgreen;
+}
+
+
+/* Quiz Selection */
+
+#indexHiraganaButton {
+    color: gray;
+    border: solid 5px gray;
+    padding: 5px;
+    cursor: pointer;
+}
+#indexKatakanaButton{
+    color:gray;
+    border: solid 5px gray;
+    padding: 5px;
+    cursor: pointer;
+}
+#quizChoice{
+    display: flex;
+    justify-content: center;
+}
+.choiceSpan {
+    margin: 1%;
+}
+
+#indexHiraganaButton:hover{
+    color:orange;
+    border-color: orange;
+}
+
+#indexKatakanaButton:hover{
+    color:springgreen;
+    border-color: springgreen;
+}
+
+#katakanaQuizList{
+    display:none;
+    color:springgreen;
+    border-color:springgreen;
+}
+#quizList{
+    display:none;
 }

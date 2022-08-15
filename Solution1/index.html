@@ -12,24 +12,24 @@
 
 
 
-<header id="nav-wrapper">
-    <nav id="nav">
-      <div class="nav-left">
-       <ul class="nav-content-left">
-        <li class="nav-item"><a href="index.html">Home</a></li>
-       </ul>            
-      
-      </div>
+    <header id="nav-wrapper">
+        <nav class="header" id="nav">
+            <div class="nav-left">
+                <ul class="nav-content-left">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                </ul>
+
+            </div>
 
 
-      <div class="nav-right">
-      <ul class="nav-content-right">
-        <li class="nav-item"><a href="learn.html">Learn Kana</a></li>
-        <li class="nav-item"><a href="about.html">About</a></li>
-      </ul>
-      </div>
-    </nav>
- </header>
+            <div class="nav-right">
+                <ul class="nav-content-right">
+                    <li class="nav-item"><a href="learn.html">Learn Kana</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 
     <section class="title">
@@ -38,15 +38,79 @@
         -->
         <div class="box-main">
             <h1>KANA PRACTICE</h1>
-            <h2>ひらがな・カタカナ</h2>
+            <h2><span id="titleHiragana">ひらがな</span>・<span id="titleKatakana">カタカナ</span></h2>
             <p>Made by: Matt Romero</p>
         </div>
     </section>
-    
+
 
     <div class="start-button" id="start-button-id">
-        <h3>Ready to start?</h3>
-        <input type="button" value="Click me" onclick="displayQuestion()" />
+        <h3>Ready to start? Which set would you like to go through?</h3>
+        <div class="hiraganaList" id="quizChoice">
+            <h3 onclick="displayHiraganaQuiz()" id="indexHiraganaButton">Hiragana ひらがな</h3>
+            <span class="choiceSpan"></span>
+            <h3 onclick="displayKatakanaQuiz()" id="indexKatakanaButton">Katakana  カタカナ</h3>
+
+        </div>
+        <div class="katakanaList" id="katakanaQuizList">
+            <input id="selection" class="selection" type="button" value="Vowels" onclick="displayKatakanaVowel()" />
+            <br />
+            <input id="selection" type="button" value="K-Line" onclick="displayKatakanaK()" />
+            <input id="selection" type="button" value="G-line" onclick="displayKatakanaG()" />
+            <br />
+            <input id="selection" type="button" value="S-Line" onclick="displayKatakanaS()" />
+
+            <input id="selection" type="button" value="Z-Line" onclick="displayKatakanaZ()" />
+            <br />
+            <input id="selection" type="button" value="T-Line" onclick="displayKatakanaT()" />
+            <input id="selection" type="button" value="D-Line" onclick="displayKatakanaD()" />
+            <br />
+            <input id="selection" type="button" value="N-Line" onclick="displayKatakanaN()" />
+            <input id="selection" type="button" value="M-Line" onclick="displayKatakanaM()" />
+            <br />
+
+            <input id="selection" type="button" value="H-Line" onclick="displayKatakanaH()" />
+            <input id="selection" type="button" value="B-Line" onclick="displayKatakanaB()" />
+            <br />
+
+            <input id="selection" type="button" value="P-Line" onclick="displayKatakanaP()" />
+            <input id="selection" type="button" value="Y-Line" onclick="displayKatakanaY()" />
+            <br />
+            <input id="selection" type="button" value="R-Line" onclick="displayKatakanaR()" />
+            <input id="selection" type="button" value="W-Line" onclick="displayKatakanaW()" />
+            <br />
+            <input id="selection" type="button" value="Nasal-Line" onclick="displayKatakanaNasal()" />
+
+        </div>
+        <div id="quizList">
+            <input id="selection" type="button" value="Vowels" onclick="displayQuestionVowel()" />
+            <br />
+            <input id="selection" type="button" value="K-Line" onclick="displayQuestionK()" />
+            <input id="selection" type="button" value="G-line" onclick="displayQuestionG()" />
+            <br />
+            <input id="selection" type="button" value="S-Line" onclick="displayQuestionS()" />
+
+            <input id="selection" type="button" value="Z-Line" onclick="displayQuestionZ()" />
+            <br />
+            <input id="selection" type="button" value="T-Line" onclick="displayQuestionT()" />
+            <input id="selection" type="button" value="D-Line" onclick="displayQuestionD()" />
+            <br />
+            <input id="selection" type="button" value="N-Line" onclick="displayQuestionN()" />
+            <input id="selection" type="button" value="M-Line" onclick="displayQuestionM()" />
+            <br />
+
+            <input id="selection" type="button" value="H-Line" onclick="displayQuestionH()" />
+            <input id="selection" type="button" value="B-Line" onclick="displayQuestionB()" />
+            <br />
+
+            <input id="selection" type="button" value="P-Line" onclick="displayQuestionP()" />
+            <input id="selection" type="button" value="Y-Line" onclick="displayQuestionY()" />
+            <br />
+            <input id="selection" type="button" value="R-Line" onclick="displayQuestionR()" />
+            <input id="selection" type="button" value="W-Line" onclick="displayQuestionW()" />
+            <br />
+            <input id="selection" type="button" value="Nasal-Line" onclick="displayQuestionNasal()" />
+        </div>
 
     </div>
 
@@ -61,7 +125,7 @@
         <form id="form1">
             <label for="answer-box">What is this kana?</label><br>
             <input type="text" autocomplete="off" id="answer" value=""><br><br>
-            <input type="button" value="Submit" onclick="displayResult()" />
+            <input class="quizButtons" type="button" value="Submit" onclick="displayResult()" />
         </form>
     </div>
 
@@ -71,13 +135,19 @@
     <div id="results">
         <form id="continue">
             <p id="result"></p>
-            <input type="button" value="Continue" onclick="displayQuestion()" />
+            <p id="test"></p>
+            <input class="quizButtons" type="button" value="Continue" onclick="displayQuestion()" />
         </form>
     </div>
+
+   
+
+
 
 
 
     <!--<script type="text/javascript" src="Javascript/scripts.js"></script> -->
+    <script type="text/javascript" src="Javascript/testScript.js"></script>
     <script type="text/javascript" src="Javascript/testScript.js"></script>
 </body>
 </html>
