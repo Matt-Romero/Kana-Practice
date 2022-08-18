@@ -1832,7 +1832,7 @@ function displayResult() {
 
         document.getElementById('result').style.display = "block";
 
-        document.getElementById('result').innerHTML = "Incorrect... The answer is:" + kana;
+        document.getElementById('result').innerHTML = "Incorrect... The answer is:" + romaji;
 
         document.getElementById('continue').style.display = "block";
     }
