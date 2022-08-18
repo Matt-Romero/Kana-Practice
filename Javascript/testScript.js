@@ -1113,6 +1113,8 @@ function displayResult() {
      * Once the question is paired to the correct Kana, the "translated" romaji is set according to the romaji property of the array. 
      * At that point the loops break and the user input is compared to the translated kana character.
     */
+
+
     while (kanaFound == false) {
         if (hiraganaBool == true) {
             if (line == 0) {
@@ -1830,7 +1832,7 @@ function displayResult() {
 
         document.getElementById('result').style.display = "block";
 
-        document.getElementById('result').innerHTML = "Incorrect...";
+        document.getElementById('result').innerHTML = "Incorrect... The answer is:" + kana;
 
         document.getElementById('continue').style.display = "block";
     }
