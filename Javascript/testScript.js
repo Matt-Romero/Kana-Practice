@@ -112,7 +112,7 @@ let hiragana_i = new hiragana("I", "い");
 let hiragana_u = new hiragana("U", "う");
 
 let hiragana_ka = new hiragana("Ka", "か");
-let hiragana_ke = new hiragana("ke", "け");
+let hiragana_ke = new hiragana("Ke", "け");
 let hiragana_ko = new hiragana("Ko", "こ");
 let hiragana_ki = new hiragana("Ki", "き");
 let hiragana_ku = new hiragana("Ku", "く");
