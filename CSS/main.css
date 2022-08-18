@@ -170,7 +170,11 @@ td {
 
 .projectList {
     color:green;
+    
+}
+#projectList {
     list-style:none;
+    
 }
 
     /* Seperates the two navigation blocks and fills between them */
